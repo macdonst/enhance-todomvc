@@ -5,7 +5,7 @@ function pluralize(count, word) {
 
 export default function ToDoFooter ({ html, state }) {
   const { store } = state
-  let todos = store.todos || []
+  let { todos = [], filter = 'all' } = store
   let active = todos.filter(todo => !todo.completed)
   let activeTodoWord = pluralize(active.length, 'item');
 
@@ -18,21 +18,21 @@ export default function ToDoFooter ({ html, state }) {
     <li>
       <a
         href="/todos"
-        class={classs({selected: nowShowing === ALL_TODOS})}>
+        class="${filter === 'all' ? 'selected' : ''}">
           All
       </a>
     </li>
     <li>
       <a
         href="/todos?filter=active"
-        class={classs({selected: nowShowing === ACTIVE_TODOS})}>
+        class="${filter === 'active' ? 'selected' : ''}">
           Active
       </a>
     </li>
     <li>
       <a
         href="/todos?filter=completed"
-        class={classs({selected: nowShowing === COMPLETED_TODOS})}>
+        class="${filter === 'completed' ? 'selected' : ''}">
           Completed
       </a>
     </li>

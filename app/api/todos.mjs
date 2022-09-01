@@ -19,7 +19,7 @@ export async function get (req) {
   }
 
   return {
-    json: { todos }
+    json: { todos, filter }
   }
 }
 
