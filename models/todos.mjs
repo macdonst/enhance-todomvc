@@ -1,6 +1,6 @@
 import data from '@begin/data'
 import { validator } from '@begin/validator'
-import { Todo } from '../app/schemas/todo.mjs'
+import { Todo } from './schemas/todo.mjs'
 
 const deleteTodo = async function (key) {
   return data.destroy({ table: 'todos', key })
