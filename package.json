@@ -2,10 +2,12 @@
   "name": "begin-app",
   "version": "0.0.1",
   "scripts": {
-    "start": "begin dev",
+    "begin": "begin dev",
+    "start": "sandbox",
     "lint": "eslint ./app/**/*.mjs --fix"
   },
   "devDependencies": {
+    "@architect/sandbox": "^5.3.3",
     "aws-sdk": "^2.1207.0",
     "eslint": "latest"
   },
