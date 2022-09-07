@@ -4,8 +4,7 @@ export default function ToDoFooter ({ html }) {
 <style>
 :host footer {
 	padding: 10px 15px;
-	height: 20px;
-	text-align: center;
+	height: 40px;
 	font-size: 15px;
 	border-color: #e6e6e6;
 }
