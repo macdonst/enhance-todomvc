@@ -5,27 +5,21 @@ export default function ToDoMain ({ html, state }) {
   return html`
 <div>
   <header className="header">
-    <h1>todos</h1>
-    <form action="/todos" method="POST">
-      <input
-        name="item"
-        class="new-todo"
-        placeholder="What needs to be done?"
-        autoFocus
-      />
-      <button class="hidden">Save</button>
-    </form>
+    <h1 class="absolute w-full font-thin text-center text5">todos</h1>
+    <todo-new-item></todo-new-item>
   </header>
-  <section class="main">
-    <form action="/todos/toggleall" method="POST">
-      <button class="toggle-all"></button>
-    </form>
-    <ul class="todo-list">
+  <section class="relative z1">
+    <todo-toggle-all></todo-toggle-all>
+    <todo-list>
       ${todos.map(todo => `<todo-item key="${todo.key}" item="${todo.item}" ${todo.completed ? 'checked' : ''}>${todo.item}</todo-item>
 `).join('\n')}
-    </ul>
+    </todo-list>
   </section>
-  <todo-footer></todo-footer>
+  <todo-footer>
+    <todo-count></todo-count>
+    <todo-filters></todo-filters>
+    <todo-clear-completed></todo-clear-completed>
+  </todo-footer>
 </div>`
 }
 
