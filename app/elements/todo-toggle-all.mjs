@@ -1,8 +1,7 @@
 // View documentation at: https://docs.begin.com
 export default function ToDoToggleAll ({ html }) {
   return html`
-  <style>
-
+<style>
 :host button {
 	width: 45px;
 	height: 65px;
@@ -10,7 +9,6 @@ export default function ToDoToggleAll ({ html }) {
 	top: -65px;
 	left: -0;
 }
-
 :host button:before {
 	content: '❯';
 	display: inline-block;
@@ -20,11 +18,10 @@ export default function ToDoToggleAll ({ html }) {
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
-
 :host button:checked:before {
 	color: #484848;
 }
-  </style>
+</style>
 <form action="/todos/toggleall" method="POST">
     <button class="flex absolute items-center justify-center"></button>
 </form>`

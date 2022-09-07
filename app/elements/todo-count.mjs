@@ -10,13 +10,13 @@ export default function ToDoCount ({ html, state }) {
   let activeTodoWord = pluralize(active.length, 'item');
 
   return html`
-    <style>
-        :host {
-            float: left;
-        }
-    </style>
-    <span class="text-left">
-      <strong class="font-light">${active.length}</strong> ${activeTodoWord} left
-    </span>`
+<style>
+    :host {
+        float: left;
+    }
+</style>
+<span class="text-left">
+  <strong class="font-medium">${active.length}</strong> ${activeTodoWord} left
+</span>`
 }
 

@@ -5,13 +5,13 @@ export default function ToDoFilters ({ html, state }) {
 
   return html`
     <style>
-        :host li a {
+        :host a {
             border-color: transparent;
         }
-        :host li a:hover {
+        :host a:hover {
             border-color: #DB7676;
         }
-        :host li a.selected {
+        :host a.selected {
             border-color: #CE4646;
         }
     </style>
